@@ -29,9 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 
@@ -473,7 +471,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    679
+                    677
                 </div>
                 
 
@@ -532,7 +530,7 @@ dog<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span>
 <p>可以在[]里指定范围：[a-zA-z]代表所有英文字符<br>再括号的前面加一个^号代表括号内之外的字符<code>[^1-9]</code>代表数字字符之外的字符</p>
 <h1 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h1><p>空格…<br>正则表达式中的大多数元字符都是以\开头<br>| 写法 | 解释                          |<br>| —- | —————————– |<br>| \d   | 数字字符=[0-9]                |<br>| \D   | 非数字字符=[^0-9]             |<br>| \w   | 单词字符=[a-zA-z0-9]          |<br>| \W   | 非单词字符=[^a-zA-z0-9]       |<br>| \s   | 空白符，包含tab与换行符       |<br>| \S   | 非空白字符                    |<br>| .    | 任意字符，不包含换行符        |<br>| ^    | 匹配行首：<code>^a</code>只会匹配行首的a |<br>| $    | 匹配行位：<code>a$</code>只会匹配行尾的a |</p>
 <h1 id="贪婪与懒惰匹配"><a href="#贪婪与懒惰匹配" class="headerlink" title="贪婪与懒惰匹配"></a>贪婪与懒惰匹配</h1><p>*+{}默认匹配尽可能多的字符</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">&gt;</span></span>This is a sample text<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>This is a sample text<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>想要匹配<br>&lt;.+&gt;：结果是全部匹配了，因为<code>.</code>会匹配尽可能多的字符<br>解法：<br>&lt;.+?&gt;：将<strong>贪婪匹配</strong>切换为<strong>懒惰匹配</strong></p>
 <h1 id="实例："><a href="#实例：" class="headerlink" title="实例："></a>实例：</h1><h2 id="16进制颜色值匹配"><a href="#16进制颜色值匹配" class="headerlink" title="16进制颜色值匹配"></a>16进制颜色值匹配</h2><pre class="line-numbers language-none"><code class="language-none">#00
 #ffffff
@@ -541,7 +539,7 @@ dog<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span>
 #aabbc
 #000000
 #ffffffff<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>可以用\b代表字符边界，可以作为边界，你也就不要向下匹配了，就像这里的最后一个一样<br>实例代码：<code>#[a-fA-f0-9]{6}\b</code></p>
+<p>可以用\b代表字符边界，可以作为边界，你也就不要向下匹配了，就像这里的最后一个一样<br>实例代码：<code>#[a-fA-f0-9]&#123;6&#125;\b</code></p>
 <h2 id="ip地址的匹配"><a href="#ip地址的匹配" class="headerlink" title="ip地址的匹配"></a>ip地址的匹配</h2><pre class="line-numbers language-none"><code class="language-none">123
 255.255.255.0
 192.168.0.1
