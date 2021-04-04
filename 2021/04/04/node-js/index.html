@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo结合腾讯云搭建个人博客, Cencus&#39;s blog">
+    <meta name="keywords" content="Node.js, Cencus&#39;s blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>hexo结合腾讯云搭建个人博客 | Cencus&#39;s blog</title>
+    <title>Node.js | Cencus&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -322,12 +322,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hexo结合腾讯云搭建个人博客</h1>
+                    <h1 class="description center-align post-title">Node.js</h1>
                 </div>
             </div>
         </div>
@@ -455,21 +455,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-03-31
+                    2021-04-04
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2021-03-31
+                    2021-04-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    201
+                    425
                 </div>
                 
 
@@ -496,25 +496,91 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、部署环境准备"><a href="#一、部署环境准备" class="headerlink" title="一、部署环境准备"></a>一、部署环境准备</h1><h1 id="二、云服务器配置git"><a href="#二、云服务器配置git" class="headerlink" title="二、云服务器配置git"></a>二、云服务器配置git</h1><p>11.本地windows10使用Gitbash创建密钥</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></tbody></table></figure>
+                <h3 id="Node-js是什么"><a href="#Node-js是什么" class="headerlink" title="Node.js是什么"></a>Node.js是什么</h3><p> 打开服务端黑盒子，不是只有node可以</p>
+<ol>
+<li>Java</li>
+<li>PHP</li>
+<li>Python</li>
+<li>Ruby（github就是Ruby做的）</li>
+<li>.Net（dot net c#(c shape)）</li>
+<li>Node.js</li>
+<li>…</li>
+</ol>
+<ul>
+<li><p>Node.js</p>
+<ul>
+<li>Node.js不是一门语言</li>
+<li>不是前端框架/库</li>
+<li>是一个 JavaScript <strong>运行时环境</strong></li>
+</ul>
+</li>
+<li><p>构建于Chrome的v8引擎之上</p>
+<ul>
+<li>代码只是具有特定格式的字符串而已</li>
+<li>引擎可以帮你解析执行</li>
+<li>v8是目前最快的</li>
+<li>Node.js作者吧Google Chrom中的v8引擎移植出来，</li>
+</ul>
+</li>
+</ul>
+<p>*[运行时环境]:Node.js可以解析执行js代码，以前只有brower可以解析执行JavaScript代码，现在js可以完全脱离浏览器执行，一切归功于node.js、</p>
+<ul>
+<li><p>浏览器中的js：</p>
+<ul>
+<li>ECMAScript：（基本的语法、if、var、function、object、array）</li>
+<li>BOM</li>
+<li>DOM</li>
+</ul>
+</li>
+<li><p>Node.js中的js</p>
+<ul>
+<li>没有BOM和DOM</li>
+<li>有ECMAScript</li>
+<li>提供了一些<strong>服务器级别的操作 API</strong><ul>
+<li>文件读写</li>
+<li>网络服务构建</li>
+<li>网络通信</li>
+<li>http服务器</li>
+<li>…</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>N</p>
+<ul>
+<li>event-driven：事件驱动</li>
+<li>non-blocking I/O model 非阻塞IO模型（异步）</li>
+<li>lightweight and efficient 轻量高效</li>
+</ul>
+</li>
+<li><p>Node.js’ package ecosystem,npm,is the largest ecosystem of open source libraries in the world.</p>
+<ul>
+<li>package ecosystem：包生态系统</li>
+<li>npm：基于nodejs开发出来的包管理工具，世界上最大的开源库生态系统</li>
+<li>绝大多数js相关的包都存放在了npm上，这样做的目的是为了让开发人员更方便的去下载使用</li>
+<li><code>npm install jquery</code></li>
+<li></li>
+</ul>
+</li>
+</ul>
+<p>都可以做到相同的事情，但是语法不同。<br>采用<strong>JavaScript来搭建后端语言</strong></p>
+<blockquote>
+<p>凡是能用js来实现的，最终都会用js实现</p>
+</blockquote>
+<h3 id="1-3-Node-js能做什么"><a href="#1-3-Node-js能做什么" class="headerlink" title="1.3 Node.js能做什么"></a>1.3 Node.js能做什么</h3><ul>
+<li>Web 服务器后台</li>
+<li>命令行工具<ul>
+<li>npm（node）</li>
+<li>git（c 语言）</li>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">hexo</a>（node）</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<p>nodejs.org</p>
+<p>org=organization</p>
+<p>lts：long time support</p>
 
-<p>这里三次enter</p>
-<p>12.将本地创建id_rsa.pub中文件复制</p>
-<p>到<code>C:\Users\用户名\.ssh</code>下找到id_rsa.pub，复制里面的所有内容</p>
-<p>服务器端：</p>
-<p>回到root目录</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-
-<p> 2、然后找到 <em><strong>.ssh</strong></em> 目录，如果没有的话，就新建并赋予权限：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir .ssh &amp;&amp; chmod 700 .ssh</span><br></pre></td></tr></tbody></table></figure>
-
-<p>3、然后接着新建文件authorized_keys：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch .ssh/authorized_keys &amp;&amp; chmod 600 .ssh/authorized_keys</span><br></pre></td></tr></tbody></table></figure>
-
-<p>4、接着，我们需要为系统用户的 <code>authorized_keys</code> 文件添加一些开发者 SSH 公钥。</p>
-<p> 5、将这些公钥加入系统用户的 <code>.ssh</code> 目录下 <code>authorized_keys</code> 文件的末尾，然后再次进行push就不再需要进行登录验证了</p>
-<h1 id="三、云服务器网站配置"><a href="#三、云服务器网站配置" class="headerlink" title="三、云服务器网站配置"></a>三、云服务器网站配置</h1>
                 
             </div>
             <hr/>
@@ -540,7 +606,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/03/31/hexo-jie-he-teng-xun-yun-da-jian-ge-ren-bo-ke/">http://example.com/2021/03/31/hexo-jie-he-teng-xun-yun-da-jian-ge-ren-bo-ke/</a>
+                    <a href="http://example.com/2021/04/04/node-js/">http://example.com/2021/04/04/node-js/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -751,13 +817,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2021/04/03/ying-ping-ji/">
+                <a href="/2021/04/04/pr/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="影评集">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Pr">
                         
-                        <span class="card-title">影评集</span>
+                        <span class="card-title">Pr</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -768,7 +834,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-03
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-04
                         </span>
                         <span class="publish-author">
                             
@@ -781,8 +847,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BD%B1%E8%AF%84/">
-                        <span class="chip bg-color">影评</span>
+                    <a href="/tags/Pr-%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/">
+                        <span class="chip bg-color">Pr 视频剪辑</span>
                     </a>
                     
                 </div>
@@ -793,16 +859,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/31/hexo-jie-he-teng-xun-yun-da-jian-ge-ren-bo-ke/">
+                <a href="/2021/04/04/ai-qing-bi-xiu-ke/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="hexo结合腾讯云搭建个人博客">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="爱情必修课">
                         
-                        <span class="card-title">hexo结合腾讯云搭建个人博客</span>
+                        <span class="card-title">爱情必修课</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -813,7 +879,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-31
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-04
                             </span>
                         <span class="publish-author">
                             
@@ -823,7 +889,14 @@
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%88%B1%E6%83%85/">
+                        <span class="chip bg-color">爱情</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
