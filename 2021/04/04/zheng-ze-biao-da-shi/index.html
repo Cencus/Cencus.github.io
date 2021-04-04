@@ -507,7 +507,31 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><p><a target="_blank" rel="noopener" href="http://regex101.com/">http://regex101.com</a><br>页面解读</p>
-<h1 id="限定符"><a href="#限定符" class="headerlink" title="限定符"></a>限定符</h1><p>匹配对象是一个字符<br>| 符号 | 解释                                                         |<br>| —- | ———————————————————— |<br>| ?    | 限定符，前面的字符要出现<strong>0次</strong>或者[1]次,/used?代表d出现0次或者1次，也就是可有可无 |<br>| *    | 前面的字符要出现<strong>0</strong>和<strong>或者多次</strong>                          |<br>| +    | 匹配出现<strong>1</strong>次以上的字符                                    |<br>| {}   | 指定前面字符出现的次数或者范围                               |</p>
+<h1 id="限定符"><a href="#限定符" class="headerlink" title="限定符"></a>限定符</h1><p>匹配对象是一个字符</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>?</td>
+<td>限定符，前面的字符要出现<strong>0次</strong>或者[1]次,/used?代表d出现0次或者1次，也就是可有可无</td>
+</tr>
+<tr>
+<td>*</td>
+<td>前面的字符要出现<strong>0</strong>和<strong>或者多次</strong></td>
+</tr>
+<tr>
+<td>+</td>
+<td>匹配出现<strong>1</strong>次以上的字符</td>
+</tr>
+<tr>
+<td>{}</td>
+<td>指定前面字符出现的次数或者范围</td>
+</tr>
+</tbody></table>
 <blockquote>
 <p>{}匹配例子：ab{6}c：出现6次b，ab{2,6}：出现2次到6次，如果想出现两次以上：ab{2,}</p>
 </blockquote>
@@ -528,7 +552,51 @@ tiger
 aabbcc
 dog<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>可以在[]里指定范围：[a-zA-z]代表所有英文字符<br>再括号的前面加一个^号代表括号内之外的字符<code>[^1-9]</code>代表数字字符之外的字符</p>
-<h1 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h1><p>空格…<br>正则表达式中的大多数元字符都是以\开头<br>| 写法 | 解释                          |<br>| —- | —————————– |<br>| \d   | 数字字符=[0-9]                |<br>| \D   | 非数字字符=[^0-9]             |<br>| \w   | 单词字符=[a-zA-z0-9]          |<br>| \W   | 非单词字符=[^a-zA-z0-9]       |<br>| \s   | 空白符，包含tab与换行符       |<br>| \S   | 非空白字符                    |<br>| .    | 任意字符，不包含换行符        |<br>| ^    | 匹配行首：<code>^a</code>只会匹配行首的a |<br>| $    | 匹配行位：<code>a$</code>只会匹配行尾的a |</p>
+<h1 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h1><p>空格…<br>正则表达式中的大多数元字符都是以\开头</p>
+<table>
+<thead>
+<tr>
+<th>写法</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\d</td>
+<td>数字字符=[0-9]</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>非数字字符=[^0-9]</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>单词字符=[a-zA-z0-9]</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>非单词字符=[^a-zA-z0-9]</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>空白符，包含tab与换行符</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>非空白字符</td>
+</tr>
+<tr>
+<td>.</td>
+<td>任意字符，不包含换行符</td>
+</tr>
+<tr>
+<td>^</td>
+<td>匹配行首：<code>^a</code>只会匹配行首的a</td>
+</tr>
+<tr>
+<td>$</td>
+<td>匹配行位：<code>a$</code>只会匹配行尾的a</td>
+</tr>
+</tbody></table>
 <h1 id="贪婪与懒惰匹配"><a href="#贪婪与懒惰匹配" class="headerlink" title="贪婪与懒惰匹配"></a>贪婪与懒惰匹配</h1><p>*+{}默认匹配尽可能多的字符</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>This is a sample text<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>想要匹配<br>&lt;.+&gt;：结果是全部匹配了，因为<code>.</code>会匹配尽可能多的字符<br>解法：<br>&lt;.+?&gt;：将<strong>贪婪匹配</strong>切换为<strong>懒惰匹配</strong></p>
