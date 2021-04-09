@@ -1738,8 +1738,8 @@ $sel<span class="token punctuation">.</span><span class="token function">each</s
             tocSelector: '#toc-content',
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('1'),
-            headingSelector: 'h1'
+            collapseDepth: Number('2'),
+            headingSelector: 'h1,h2'
         });
 
         // modify the toc link href to support Chinese.
@@ -1751,7 +1751,7 @@ $sel<span class="token punctuation">.</span><span class="token function">each</s
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h1').each(function () {
+        $('#articleContent').children('h1,h2').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
