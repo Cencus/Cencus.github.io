@@ -460,14 +460,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2021-03-31
+                    2021-04-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    202
+                    117
                 </div>
                 
 
@@ -502,25 +502,59 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、部署环境准备"><a href="#一、部署环境准备" class="headerlink" title="一、部署环境准备"></a>一、部署环境准备</h1><h1 id="二、云服务器配置git"><a href="#二、云服务器配置git" class="headerlink" title="二、云服务器配置git"></a>二、云服务器配置git</h1><p>11.本地windows10使用Gitbash创建密钥</p>
-<pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h1 id="一、部署环境准备"><a href="#一、部署环境准备" class="headerlink" title="一、部署环境准备"></a>一、部署环境准备</h1><p>1.安装node.js</p>
+<p>查看node版本</p>
+<pre class="line-numbers language-none"><code class="language-none">node -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>这里三次enter</p>
-<p>12.将本地创建id_rsa.pub中文件复制</p>
-<p>到<code>C:\Users\用户名\.ssh</code>下找到id_rsa.pub，复制里面的所有内容</p>
-<p>服务器端：</p>
-<p>回到root目录</p>
-<pre class="line-numbers language-none"><code class="language-none"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p> 2、然后找到 <em><strong>.ssh</strong></em> 目录，如果没有的话，就新建并赋予权限：</p>
-<pre class="line-numbers language-none"><code class="language-none">mkdir .ssh &amp;&amp; chmod 700 .ssh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>3、然后接着新建文件authorized_keys：</p>
-<pre class="line-numbers language-none"><code class="language-none">touch .ssh&#x2F;authorized_keys &amp;&amp; chmod 600 .ssh&#x2F;authorized_keys<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>2.安装hexo</p>
+<pre class="line-numbers language-none"><code class="language-none">npm install -g cnpm --registry&#x3D;http:&#x2F;&#x2F;registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>4、接着，我们需要为系统用户的 <code>authorized_keys</code> 文件添加一些开发者 SSH 公钥。</p>
-<p> 5、将这些公钥加入系统用户的 <code>.ssh</code> 目录下 <code>authorized_keys</code> 文件的末尾，然后再次进行push就不再需要进行登录验证了</p>
-<h1 id="三、云服务器网站配置"><a href="#三、云服务器网站配置" class="headerlink" title="三、云服务器网站配置"></a>三、云服务器网站配置</h1>
+
+
+<p>开始使用cnpm</p>
+<p>3.cnpm安装hexo</p>
+<pre class="line-numbers language-none"><code class="language-none">cnpm install -g hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">hexo -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+
+
+<pre class="line-numbers language-none"><code class="language-none">mkdir blog<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>初始化博客</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">hexo init &lt;floder&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>启动博客</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<ul>
+<li>新建文章</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">hexo n &quot;title&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">hexo cl &amp;&amp; hexo g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<p>改变主题</p>
+<ol>
+<li>clone主题</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">git clone https:&#x2F;&#x2F;github.com&#x2F;litten&#x2F;hexo-theme-yilia.git themes&#x2F;yilia<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>修改_config.yml文件</p>
+<p>theme: yilia</p>
+
                 
             </div>
             <hr/>
@@ -964,7 +998,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">25.3k</span>&nbsp;字
+                class="white-color">25.2k</span>&nbsp;字
             
             
             
