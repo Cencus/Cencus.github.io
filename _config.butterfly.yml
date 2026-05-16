@@ -1,0 +1,28 @@
+# Butterfly 主题配置
+
+# 首页 Banner（已禁用）
+index_img:
+
+# 默认文章封面（随机选择）
+default_cover:
+  - /img/banner.jpg
+
+# 打字机效果副标题
+subtitle:
+  enable: true
+  effect: true  # 打字机效果
+  loop: true    # 循环播放
+  source: false # 关闭第三方
+  sub:
+    - "Stay hungry, stay foolish. — Steve Jobs"
+    - "Talk is cheap. Show me the code. — Linus Torvalds"
+    - "The best way to predict the future is to create it. — Alan Kay"
+
+# 页脚背景
+footer_bg: /img/banner.jpg
+
+# 不蒜子统计（访问量显示）
+busuanzi:
+  site_uv: true  # 站点访客数
+  site_pv: true  # 站点访问量
+  page_pv: true  # 文章阅读量
