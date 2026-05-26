@@ -26,3 +26,18 @@ busuanzi:
   site_uv: true  # 站点访客数
   site_pv: true  # 站点访问量
   page_pv: true  # 文章阅读量
+
+# PJAX（无刷新页面切换，Live2D 持久化）
+pjax:
+  enable: true
+
+# Live2D 看板娘（蕾姆）
+inject:
+  head:
+    - <link rel="stylesheet" href="/live2d/css/live2d.css" />
+  bottom:
+    - <div id="landlord" style="right:5px;bottom:0px;"><div class="message" style="opacity:0"></div><canvas id="live2d" width="500" height="560" class="live2d"></canvas><input type="hidden" id="live_talk" value="1"></div>
+    - <script src="/live2d/js/jquery.min.js"></script>
+    - <script>var message_Path = '/live2d/'; var talkAPI = '';</script>
+    - <script src="/live2d/js/live2d.js"></script>
+    - <script src="/live2d/js/message.js"></script>
