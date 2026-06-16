@@ -1,0 +1,362 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>GitHub下载加速指南 | 与光同尘</title><meta name="author" content="lewis"><meta name="copyright" content="lewis"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="国内访问 GitHub 经常遇到速度慢、连接超时等问题，严重影响开发效率。本文整理了 2024-2026 年最有效的 GitHub 加速方案，涵盖网页访问、代码克隆、文件下载等多种场景。 一、镜像网站（浏览项目）镜像网站是最简单的加速方式，直接替换域名即可访问 GitHub 项目页面：    镜像站 状态 特点    bgithub.xyz ✅ 可用 界面简洁，支持搜索   gitclone.co">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitHub下载加速指南">
+<meta property="og:url" content="https://cencus.github.io/post/github-acceleration-guide/index.html">
+<meta property="og:site_name" content="与光同尘">
+<meta property="og:description" content="国内访问 GitHub 经常遇到速度慢、连接超时等问题，严重影响开发效率。本文整理了 2024-2026 年最有效的 GitHub 加速方案，涵盖网页访问、代码克隆、文件下载等多种场景。 一、镜像网站（浏览项目）镜像网站是最简单的加速方式，直接替换域名即可访问 GitHub 项目页面：    镜像站 状态 特点    bgithub.xyz ✅ 可用 界面简洁，支持搜索   gitclone.co">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cencus.github.io/img/avatar.jpg">
+<meta property="article:published_time" content="2026-06-16T02:54:00.000Z">
+<meta property="article:modified_time" content="2026-06-16T02:54:52.517Z">
+<meta property="article:author" content="lewis">
+<meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="工具">
+<meta property="article:tag" content="开发效率">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cencus.github.io/img/avatar.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "GitHub下载加速指南",
+  "url": "https://cencus.github.io/post/github-acceleration-guide/",
+  "image": "https://cencus.github.io/img/avatar.jpg",
+  "datePublished": "2026-06-16T02:54:00.000Z",
+  "dateModified": "2026-06-16T02:54:52.517Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "lewis",
+      "url": "https://cencus.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://cencus.github.io/post/github-acceleration-guide/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'GitHub下载加速指南',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">与光同尘</span></a><a class="nav-page-title" href="/"><span class="site-name">GitHub下载加速指南</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">GitHub下载加速指南</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-06-16T02:54:00.000Z" title="发表于 2026-06-16 10:54:00">2026-06-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-06-16T02:54:52.517Z" title="更新于 2026-06-16 10:54:52">2026-06-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>国内访问 GitHub 经常遇到速度慢、连接超时等问题，严重影响开发效率。本文整理了 2024-2026 年最有效的 GitHub 加速方案，涵盖网页访问、代码克隆、文件下载等多种场景。</p>
+<h2 id="一、镜像网站（浏览项目）"><a href="#一、镜像网站（浏览项目）" class="headerlink" title="一、镜像网站（浏览项目）"></a>一、镜像网站（浏览项目）</h2><p>镜像网站是最简单的加速方式，直接替换域名即可访问 GitHub 项目页面：</p>
+<table>
+<thead>
+<tr>
+<th>镜像站</th>
+<th>状态</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://bgithub.xyz/">bgithub.xyz</a></td>
+<td>✅ 可用</td>
+<td>界面简洁，支持搜索</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://gitclone.com/">gitclone.com</a></td>
+<td>✅ 可用</td>
+<td>附带 Git Clone 加速命令</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.ur1.fun/">github.ur1.fun</a></td>
+<td>✅ 可用</td>
+<td>支持 Markdown 渲染</td>
+</tr>
+</tbody></table>
+<p><strong>使用方法</strong>：将原链接中的 <code>github.com</code> 替换为镜像域名即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 原链接</span><br><span class="line">https://github.com/user/repo</span><br><span class="line"></span><br><span class="line"># 加速链接</span><br><span class="line">https://bgithub.xyz/user/repo</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>⚠️ 注意：镜像站通常不支持登录，只能浏览公开项目。</p>
+</blockquote>
+<h2 id="二、Git-Clone-加速"><a href="#二、Git-Clone-加速" class="headerlink" title="二、Git Clone 加速"></a>二、Git Clone 加速</h2><h3 id="方法一：URL-替换"><a href="#方法一：URL-替换" class="headerlink" title="方法一：URL 替换"></a>方法一：URL 替换</h3><p>在 clone 时替换域名：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 原命令</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/user/repo.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加速方式</span></span><br><span class="line">git <span class="built_in">clone</span> https://gitclone.com/github.com/user/repo.git</span><br><span class="line">git <span class="built_in">clone</span> https://github.com.cnpmjs.org/user/repo.git</span><br></pre></td></tr></table></figure>
+
+<h3 id="方法二：全局配置（推荐）"><a href="#方法二：全局配置（推荐）" class="headerlink" title="方法二：全局配置（推荐）"></a>方法二：全局配置（推荐）</h3><p>一劳永逸的方式，配置后所有 <code>git clone</code> 自动加速：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用 gitclone.com 加速</span></span><br><span class="line">git config --global url.<span class="string">&quot;https://gitclone.com/github.com/&quot;</span>.insteadOf <span class="string">&quot;https://github.com/&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 或使用 cnpmjs.org 加速</span></span><br><span class="line">git config --global url.<span class="string">&quot;https://github.com.cnpmjs.org/&quot;</span>.insteadOf <span class="string">&quot;https://github.com/&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>取消配置</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> url.<span class="string">&quot;https://gitclone.com/github.com/&quot;</span>.insteadOf</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、文件下载加速"><a href="#三、文件下载加速" class="headerlink" title="三、文件下载加速"></a>三、文件下载加速</h2><h3 id="3-1-在线代理工具"><a href="#3-1-在线代理工具" class="headerlink" title="3.1 在线代理工具"></a>3.1 在线代理工具</h3><p>直接粘贴 GitHub 链接即可生成加速下载地址：</p>
+<table>
+<thead>
+<tr>
+<th>代理站</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://gh-proxy.com/">gh-proxy.com</a></td>
+<td>支持多节点、批量下载</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://ghproxy.net/">ghproxy.net</a></td>
+<td>自动识别文件类型，支持断点续传</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://ghproxy.homeboyc.cn/">ghproxy.homeboyc.cn</a></td>
+<td>大文件稳定（1GB+）</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.akams.cn/">github.akams.cn</a></td>
+<td>支持 API、Gist、Raw 等多种资源</td>
+</tr>
+</tbody></table>
+<p><strong>使用示例</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Release 文件加速</span></span><br><span class="line"><span class="comment"># 原链接</span></span><br><span class="line">https://github.com/user/repo/releases/download/v1.0/app.zip</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加速链接</span></span><br><span class="line">https://gh-proxy.com/https://github.com/user/repo/releases/download/v1.0/app.zip</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-jsDelivr-CDN（适合小文件）"><a href="#3-2-jsDelivr-CDN（适合小文件）" class="headerlink" title="3.2 jsDelivr CDN（适合小文件）"></a>3.2 jsDelivr CDN（适合小文件）</h3><p>适用于 <code>raw.githubusercontent.com</code> 上的文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 原链接</span></span><br><span class="line">https://raw.githubusercontent.com/user/repo/main/file.js</span><br><span class="line"></span><br><span class="line"><span class="comment"># jsDelivr 加速</span></span><br><span class="line">https://cdn.jsdelivr.net/gh/user/repo@main/file.js</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-3-高校镜像站"><a href="#3-3-高校镜像站" class="headerlink" title="3.3 高校镜像站"></a>3.3 高校镜像站</h3><table>
+<thead>
+<tr>
+<th>镜像站</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/github-release">清华 TUNA</a></td>
+<td>GitHub Release 文件镜像</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://gitee.com/organizations/mirrors/projects">Gitee 镜像库</a></td>
+<td>热门开源项目镜像</td>
+</tr>
+</tbody></table>
+<h2 id="四、大文件下载优化"><a href="#四、大文件下载优化" class="headerlink" title="四、大文件下载优化"></a>四、大文件下载优化</h2><h3 id="aria2-多线程下载"><a href="#aria2-多线程下载" class="headerlink" title="aria2 多线程下载"></a>aria2 多线程下载</h3><p>配合加速链接使用 aria2 多线程下载：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装</span></span><br><span class="line">brew install aria2</span><br><span class="line"></span><br><span class="line"><span class="comment"># 16线程下载</span></span><br><span class="line">aria2c -x 16 -s 16 <span class="string">&quot;https://加速链接/file.zip&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="hf-mirror（适合-AI-模型）"><a href="#hf-mirror（适合-AI-模型）" class="headerlink" title="hf-mirror（适合 AI 模型）"></a>hf-mirror（适合 AI 模型）</h3><p>用于下载 GitHub Release 上的大型模型文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 原链接</span></span><br><span class="line">https://github.com/user/repo/releases/download/v1.0/model.bin</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加速链接</span></span><br><span class="line">https://hf-mirror.com/user/repo/releases/download/v1.0/model.bin</span><br></pre></td></tr></table></figure>
+
+<h2 id="五、一键加速工具"><a href="#五、一键加速工具" class="headerlink" title="五、一键加速工具"></a>五、一键加速工具</h2><h3 id="dev-sidecar（推荐）"><a href="#dev-sidecar（推荐）" class="headerlink" title="dev-sidecar（推荐）"></a>dev-sidecar（推荐）</h3><p>一款开发者边车工具，支持 GitHub、Stack Overflow、npm 等多个平台的加速。</p>
+<p><strong>功能特点</strong>：</p>
+<ul>
+<li>GitHub 网页、Clone、Release 全方位加速</li>
+<li>Stack Overflow 加速</li>
+<li>npm 加速</li>
+<li>支持自定义规则</li>
+</ul>
+<p><strong>安装</strong>：<a target="_blank" rel="noopener" href="https://github.com/docmirror/dev-sidecar">GitHub - docmirror&#x2F;dev-sidecar</a></p>
+<p><strong>注意</strong>：需要信任 HTTPS 证书。</p>
+<h2 id="六、方案选择建议"><a href="#六、方案选择建议" class="headerlink" title="六、方案选择建议"></a>六、方案选择建议</h2><table>
+<thead>
+<tr>
+<th>场景</th>
+<th>推荐方案</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>浏览项目</td>
+<td>镜像网站（bgithub.xyz）</td>
+</tr>
+<tr>
+<td>git clone</td>
+<td>全局配置 gitclone.com</td>
+</tr>
+<tr>
+<td>下载小文件（&lt;100MB）</td>
+<td>gh-proxy.com + jsDelivr</td>
+</tr>
+<tr>
+<td>下载大文件（&gt;100MB）</td>
+<td>aria2 + ghproxy.homeboyc.cn</td>
+</tr>
+<tr>
+<td>下载 AI 模型</td>
+<td>hf-mirror.com</td>
+</tr>
+<tr>
+<td>持续开发</td>
+<td>dev-sidecar 工具</td>
+</tr>
+</tbody></table>
+<h2 id="七、注意事项"><a href="#七、注意事项" class="headerlink" title="七、注意事项"></a>七、注意事项</h2><ol>
+<li><strong>安全性</strong>：镜像站和代理服务可能会记录访问日志，敏感项目建议使用 VPN</li>
+<li><strong>时效性</strong>：部分镜像站可能随时失效，建议收藏多个备选</li>
+<li><strong>速度波动</strong>：不同地区、不同运营商访问各镜像站的速度可能不同，建议测试后选择最快的</li>
+<li><strong>认证问题</strong>：镜像站无法登录 GitHub，推送代码仍需访问官方站点</li>
+</ol>
+<hr>
+<p>希望这份指南能帮助你更顺畅地使用 GitHub！如有更好的加速方案，欢迎留言分享。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://cencus.github.io">lewis</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://cencus.github.io/post/github-acceleration-guide/">https://cencus.github.io/post/github-acceleration-guide/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://cencus.github.io" target="_blank">与光同尘</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/GitHub/">GitHub</a><a class="post-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7/">工具</a><a class="post-meta__tags" href="/tags/%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87/">开发效率</a></div><div class="post-share"><div class="social-share" data-image="/img/avatar.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width no-desc" href="/post/0/" title=""><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2"></div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/post/9f303d40/" title="Vim 常用命令速查"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-09</div><div class="info-item-2">Vim 常用命令速查</div></div><div class="info-2"><div class="info-item-1">Vim 常用命令速查模式切换   命令 说明    i 光标前插入   a 光标后插入   o 下方新建行插入   O 上方新建行插入   v 可视模式（选中文本）   V 行可视模式   Esc 退出当前模式   移动   命令 说明    h j k l 左 下 上 右   w &#x2F; W 下一个单词开头   b &#x2F; B 上一个单词开头   0 行首   $ 行尾   gg 文件开头   G 文件结尾   :10 跳到第 10 行   删除&#x2F;复制&#x2F;粘贴   命令 说明    dd 删除整行   dw 删除到单词结尾   d$ &#x2F; D 删除到行尾   yy 复制整行   yw 复制单词   p 粘贴到光标后   P 粘贴到光标前   x 删除当前字符   编辑   命令 说明    u 撤销   Ctrl + r 重做   . 重复上一个操作   r 替换当前字符   cw 替换单词   cc 替换整行   &gt;&gt; 缩进   &lt;&lt; 取消缩进   搜索替换   命令 说明    /word 向下搜索   ?wor...</div></div></div></a><a class="pagination-related" href="/post/5f33c4f2/" title="ccswitch"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-09</div><div class="info-item-2">ccswitch</div></div><div class="info-2"><div class="info-item-1">CCSwitch 简单介绍CCSwitch 是一个轻量级的命令行切换工具，用于快速切换不同的配置环境。 功能特点 快速切换配置 支持多环境管理 命令行友好  使用方法12345678# 查看当前配置ccswitch status# 切换到指定环境ccswitch use &lt;env-name&gt;# 列出所有环境ccswitch list  安装1npm install -g ccswitch  总结CCSwitch 让配置管理变得简单高效，适合需要在多个环境之间频繁切换的开发场景。 </div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">lewis</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%95%9C%E5%83%8F%E7%BD%91%E7%AB%99%EF%BC%88%E6%B5%8F%E8%A7%88%E9%A1%B9%E7%9B%AE%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">一、镜像网站（浏览项目）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Git-Clone-%E5%8A%A0%E9%80%9F"><span class="toc-number">2.</span> <span class="toc-text">二、Git Clone 加速</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9AURL-%E6%9B%BF%E6%8D%A2"><span class="toc-number">2.1.</span> <span class="toc-text">方法一：URL 替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9A%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">2.2.</span> <span class="toc-text">方法二：全局配置（推荐）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%8A%A0%E9%80%9F"><span class="toc-number">3.</span> <span class="toc-text">三、文件下载加速</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%9C%A8%E7%BA%BF%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 在线代理工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-jsDelivr-CDN%EF%BC%88%E9%80%82%E5%90%88%E5%B0%8F%E6%96%87%E4%BB%B6%EF%BC%89"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 jsDelivr CDN（适合小文件）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E9%AB%98%E6%A0%A1%E9%95%9C%E5%83%8F%E7%AB%99"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 高校镜像站</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%A4%A7%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E4%BC%98%E5%8C%96"><span class="toc-number">4.</span> <span class="toc-text">四、大文件下载优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#aria2-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8B%E8%BD%BD"><span class="toc-number">4.1.</span> <span class="toc-text">aria2 多线程下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hf-mirror%EF%BC%88%E9%80%82%E5%90%88-AI-%E6%A8%A1%E5%9E%8B%EF%BC%89"><span class="toc-number">4.2.</span> <span class="toc-text">hf-mirror（适合 AI 模型）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%B8%80%E9%94%AE%E5%8A%A0%E9%80%9F%E5%B7%A5%E5%85%B7"><span class="toc-number">5.</span> <span class="toc-text">五、一键加速工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#dev-sidecar%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">5.1.</span> <span class="toc-text">dev-sidecar（推荐）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%96%B9%E6%A1%88%E9%80%89%E6%8B%A9%E5%BB%BA%E8%AE%AE"><span class="toc-number">6.</span> <span class="toc-text">六、方案选择建议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">7.</span> <span class="toc-text">七、注意事项</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/github-acceleration-guide/" title="GitHub下载加速指南">GitHub下载加速指南</a><time datetime="2026-06-16T02:54:00.000Z" title="发表于 2026-06-16 10:54:00">2026-06-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/0/" title="无标题">无标题</a><time datetime="2026-06-15T02:19:31.120Z" title="发表于 2026-06-15 10:19:31">2026-06-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/0/" title="无标题">无标题</a><time datetime="2026-06-08T11:27:30.220Z" title="发表于 2026-06-08 19:27:30">2026-06-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/1b2ab5c/" title="Marvis（马维斯）洞察报告">Marvis（马维斯）洞察报告</a><time datetime="2026-05-28T07:00:00.000Z" title="发表于 2026-05-28 15:00:00">2026-05-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/live2d-tutorial/" title="Live2D Cubism 教程笔记">Live2D Cubism 教程笔记</a><time datetime="2026-05-26T11:42:00.000Z" title="发表于 2026-05-26 19:42:00">2026-05-26</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By lewis</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script id="canvas_nest" defer="defer" color="100,149,237" opacity="0.7" zIndex="-1" count="150" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      false
+        ? pjax.loadUrl('/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax src="https://registry.npmmirror.com/oh-my-live2d/latest/files"></script><script>const oml2d = OML2D.loadOml2d({importType:"cubism2",dockedPosition:"right",menus:{items:[]},mobileDisplay:true,showHitAreaFrames:true,models:[{"path":"/live2d/model/rem/rem.json","scale":0.12,"position":[0,60],"stageStyle":{"width":340,"height":380,"margin-right":"50px"},"mobileScale":0.1,"mobilePosition":[-10,23],"mobileStageStyle":{"width":280,"height":280}}],primaryColor:"var(--btn-bg)",sayHello:true,tips:{style: {"width":230,"height":120,"left":"calc(50% - 20px)"}}});</script><!-- hexo injector body_end end --></body></html>
