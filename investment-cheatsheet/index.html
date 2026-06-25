@@ -1,0 +1,773 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>与光同尘 | 与光同尘</title><meta name="author" content="lewis"><meta name="copyright" content="lewis"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="《投资最重要的事》速查卡              * { margin: 0; padding: 0; box-sizing: border-box; }         body {             font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetic">
+<meta property="og:type" content="website">
+<meta property="og:title" content="与光同尘">
+<meta property="og:url" content="https://cencus.github.io/investment-cheatsheet/index.html">
+<meta property="og:site_name" content="与光同尘">
+<meta property="og:description" content="《投资最重要的事》速查卡              * { margin: 0; padding: 0; box-sizing: border-box; }         body {             font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetic">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cencus.github.io/img/avatar.jpg">
+<meta property="article:published_time" content="2026-06-25T17:05:00.197Z">
+<meta property="article:modified_time" content="2026-06-25T17:05:00.197Z">
+<meta property="article:author" content="lewis">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cencus.github.io/img/avatar.jpg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://cencus.github.io/investment-cheatsheet/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '与光同尘',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'page'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">与光同尘</span></a></span><div id="menus"></div></nav><div id="page-site-info"><h1 id="site-title"></h1></div></header><main class="layout" id="content-inner"><div id="page"><div class="container" id="article-container"><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>《投资最重要的事》速查卡</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #f0c040;
+        }
+        .subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 30px;
+            font-size: 0.9em;
+        }
+        .core-quote {
+            background: linear-gradient(135deg, #2d2d44 0%, #1e1e30 100%);
+            border-left: 4px solid #f0c040;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 0 10px 10px 0;
+            font-size: 1.1em;
+        }
+        .core-quote strong { color: #f0c040; }
+        .rules {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .rule {
+            background: #2d2d44;
+            padding: 12px 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .rule-icon { font-size: 1.2em; }
+        .chapter {
+            background: #252538;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        .chapter-header {
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #2a2a40;
+            transition: background 0.3s;
+        }
+        .chapter-header:hover { background: #353555; }
+        .chapter-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .chapter-num {
+            background: #f0c040;
+            color: #1a1a2e;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.85em;
+        }
+        .chapter-content {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        .chapter.open .chapter-content {
+            max-height: 800px;
+            padding: 15px 20px;
+        }
+        .chapter.open .arrow { transform: rotate(180deg); }
+        .arrow { transition: transform 0.3s; color: #888; }
+        .core-point {
+            color: #f0c040;
+            font-weight: 500;
+            margin-bottom: 12px;
+            padding-left: 10px;
+            border-left: 3px solid #f0c040;
+        }
+        .fable {
+            background: #1e1e30;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        .fable-title {
+            color: #7dd3fc;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        .table-wrap {
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9em;
+        }
+        th, td {
+            padding: 8px 12px;
+            text-align: left;
+            border: 1px solid #444;
+        }
+        th { background: #2a2a40; color: #f0c040; }
+        .checklist {
+            background: #1e1e30;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        .checklist li {
+            margin: 8px 0;
+            padding-left: 5px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #666;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📖 《投资最重要的事》速查卡</h1>
+        <p class="subtitle">霍华德·马克斯 | 读书笔记 | 蕾姆整理</p>
+
+        <div class="core-quote">
+            <strong>一句话记住全书：</strong>成功投资不是关于买什么，而是关于不做什么。
+        </div>
+
+        <div class="rules">
+            <div class="rule"><span class="rule-icon">🚫</span> 别追高 → 等低价</div>
+            <div class="rule"><span class="rule-icon">💸</span> 别加杠杆 → 用自己的钱</div>
+            <div class="rule"><span class="rule-icon">🤔</span> 别买看不懂的 → 只买懂的</div>
+            <div class="rule"><span class="rule-icon">🔄</span> 别频繁交易 → 长期持有</div>
+            <div class="rule"><span class="rule-icon">😤</span> 别情绪化 → 保持理性</div>
+            <div class="rule"><span class="rule-icon">🐑</span> 别和群体一致 → 逆向思考</div>
+        </div>
+
+        <div class="chapter" onclick="this.classList.toggle('open')">
+            <div class="chapter-header">
+                <div class="chapter-title">
+                    <span class="chapter-num">1</span>
+                    <span>第二层次思维</span>
+                </div>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="chapter-content">
+                <div class="core-point">第一层次看表面，第二层次看深层。</div>
+                <div class="table-wrap">
+                    <table>
+                        <tr><th>第一层次思维</th><th>第二层次思维</th></tr>
+                        <tr><td>"好公司，买"</td><td>"好公司，但大家都觉得好，价格太贵，卖"</td></tr>
+                        <tr><td>"经济不好，卖"</td><td>"经济不好，但大家都恐慌，价格便宜，买"</td></tr>
+                    </table>
+                </div>
+                <p style="margin-top:10px; color:#aaa;">投资不是选对答案，而是比别人想得更深一步。</p>
+            </div>
+        </div>
+
+        <div class="chapter" onclick="this.classList.toggle('open')">
+            <div class="chapter-header">
+                <div class="chapter-title">
+                    <span class="chapter-num">2</span>
+                    <span>理解市场有效性及局限性</span>
+                </div>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="chapter-content">
+                <div class="core-point">市场既不完全有效，也不完全无效。</div>
+                <ul class="checklist">
+                    <li>✅ 有效市场（大公司、信息透明）→ 不浪费时间</li>
+                    <li>✅ 无效市场（冷门小盘、争议资产）→ 可以下功夫</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="chapter" onclick="this.classList.toggle('open')">
+            <div class="chapter-header">
+                <div class="chapter-title">
+                    <span class="chapter-num">3</span>
+                    <span>准确估计价值</span>
+                </div>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="chapter-content">
+                <div class="fable">
+                    <div class="fable-title">🎭 寓言：淘金者和验货师</div>
+                    <p>淘金者看到金矿就兴奋："金矿！值钱！"<br>验货师会问："金矿品位多少？开采成本？运输费用？政治风险？"</p>
+                </div>
+                <div class="core-point" style="margin-top:12px;">价值投资不是"买便宜货"，而是"买低于内在价值的东西"。</div>
+            </div>
+        </div>
+
+        <div class="chapter" onclick="this.classList.toggle('open')">
+            <div class="chapter-header">
+                <div class="chapter-title">
+                    <span class="chapter-num">4</span>
+                    <span>价格与价值的关系</span>
+                </div>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="chapter-content">
+                <div class="core-point">好资产买贵了 = 坏投资。</div>
+                <blockquote style="margin-top:10px; padding:10px; background:#1e1e30; border-radius:8px; font-style:italic;">
+                    "买得完美，你不需要择时；择时完美，你不需要分散。"
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="chapter" onclick="this.classList.toggle('open')">
+            <div class="chapter-header">
+                <div class="chapter-title">
+                    <span class="chapter-num">5</span>
+                    <span>理解风险</span>
+                </div>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="chapter-content">
+                <div class="fable">
+                    <div class="fable-title">🚢 寓言：两艘船</div>
+                    <p>第一艘船装修豪华、速度快，船长说"三年没出事"。<br>第二艘船朴实无华、有压舱石。<br><br>第四年风暴来了，第一艘船翻了，第二艘船稳稳抵港。</p>
+                </div>
+                <div class="core-point" style="margin-top:12px;">风险是隐形的——你看不见它，不代表它不存在。</div>
+            </div>
+        </div>
+
+        <div class="chapter" onclick="this.classList.toggle('open')">
+            <div class="chapter-header">
+                <div class="chapter-title">
+                    <span class="chapter-num">6</span>
+                    <span>识别风险</span>
+                </div>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="chapter-content">
+                <div class="core-point">风险最大的来源是"大家都觉得安全"。</div>
+                <ul class="checklist">
+                    <li>⚠️ 高价格 = 高风险</li>
+                    <li>⚠️ 资金泛滥 = 高风险</li>
+                    <li>⚠️ "这次不一样" = 最危险的话</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="chapter" onclick="this.classList.toggle('open')">
+            <div class="chapter-header">
+                <div class="chapter-title">
+                    <span class="chapter-num">7</span>
+                    <span>控制风险</span>
+                </div>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="chapter-content">
+                <div class="fable">
+                    <div class="fable-title">⛵ 寓言：两个船长</div>
+                    <p>勇进号挂满风帆全速前进，安稳号检查每块木板、搬上压舱石。<br>别人笑安稳号慢，直到百年一遇的风浪袭来。</p>
+                </div>
+                <div class="core-point" style="margin-top:12px;">杰出投资者的标志不是赚多少，而是同等收益下承担更低风险。</div>
+                <blockquote style="margin-top:10px; padding:10px; background:#1e1e30; border-radius:8px;">
+                    <strong>风险控制 ≠ 风险规避</strong><br>
+                    风险控制是识别、评估、分散后主动承担；风险规避是干脆什么都不做。
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="chapter" onclick="this.classList.toggle('open')">
+            <div class="chapter-header">
+                <div class="chapter-title">
+                    <span class="chapter-num">8</span>
+                    <span>关注周期</span>
+                </div>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="chapter-content">
+                <div class="core-point">市场永远在周期中循环。</div>
+                <p style="text-align:center; font-size:1.1em; margin:15px 0; color:#7dd3fc;">
+                    繁荣 → 衰退 → 复苏 → 扩张 → 繁荣...
+                </p>
+                <p style="color:#aaa;">不是"这次不一样"，而是"每次都这样"。</p>
+            </div>
+        </div>
+
+        <div class="chapter" onclick="this.classList.toggle('open')">
+            <div class="chapter-header">
+                <div class="chapter-title">
+                    <span class="chapter-num">9</span>
+                    <span>钟摆意识</span>
+                </div>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="chapter-content">
+                <div class="fable">
+                    <div class="fable-title">🔔 寓言：广场上的钟摆</div>
+                    <p>钟摆不会停在中间，它总是从一个极端摆到另一个极端。</p>
+                </div>
+                <div class="core-point" style="margin-top:12px;">市场情绪的钟摆永远在乐观与悲观之间摆动。</div>
+                <p style="margin-top:10px; color:#aaa;">当钟摆到达极端，逆向投资的机会就来了。</p>
+            </div>
+        </div>
+
+        <div class="chapter" onclick="this.classList.toggle('open')">
+            <div class="chapter-header">
+                <div class="chapter-title">
+                    <span class="chapter-num">10</span>
+                    <span>抵御消极影响</span>
+                </div>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="chapter-content">
+                <div class="core-point">六大心理敌人：</div>
+                <div class="table-wrap">
+                    <table>
+                        <tr><th>敌人</th><th>后果</th></tr>
+                        <tr><td>😤 贪婪</td><td>追高</td></tr>
+                        <tr><td>😨 恐惧</td><td>割肉</td></tr>
+                        <tr><td>😎 自负</td><td>觉得自己比别人聪明</td></tr>
+                        <tr><td>😒 嫉妒</td><td>看别人赚钱就难受</td></tr>
+                        <tr><td>🐑 从众</td><td>跟着大家走</td></tr>
+                        <tr><td>🤝 妥协</td><td>原本坚持的原则被放弃</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter" onclick="this.classList.toggle('open')">
+            <div class="chapter-header">
+                <div class="chapter-title">
+                    <span class="chapter-num">11</span>
+                    <span>逆向投资</span>
+                </div>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="chapter-content">
+                <div class="fable">
+                    <div class="fable-title">🚒 寓言：火场里的消防员</div>
+                    <p>火场里所有人都往外跑，消防员往里冲。</p>
+                </div>
+                <div class="core-point" style="margin-top:12px;">在市场极端时刻，逆向行动才能获利。</div>
+                <ul class="checklist">
+                    <li>📉 底部买入：别人恐慌时</li>
+                    <li>📈 顶部卖出：别人贪婪时</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="chapter" onclick="this.classList.toggle('open')">
+            <div class="chapter-header">
+                <div class="chapter-title">
+                    <span class="chapter-num">12</span>
+                    <span>寻找便宜货</span>
+                </div>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="chapter-content">
+                <div class="core-point">便宜货的特征：</div>
+                <ul class="checklist">
+                    <li>遭遇暂时性问题</li>
+                    <li>被市场误解</li>
+                    <li>不受欢迎</li>
+                    <li>近期表现差</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="chapter" onclick="this.classList.toggle('open')">
+            <div class="chapter-header">
+                <div class="chapter-title">
+                    <span class="chapter-num">13</span>
+                    <span>耐心等待机会</span>
+                </div>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="chapter-content">
+                <div class="fable">
+                    <div class="fable-title">🎣 寓言：钓鱼的老人</div>
+                    <p>年轻人每5分钟收一次竿，老人静静等待。最后老人钓到了大鱼。</p>
+                </div>
+                <blockquote style="margin:15px 0; padding:15px; background:#1e1e30; border-radius:8px; font-style:italic;">
+                    "投资是世上最棒的交易，因为你永远不必急着挥棒。你可以整日等待你喜欢的投球。" —— 巴菲特
+                </blockquote>
+                <div class="core-point">不找投资，投资找你。等待便宜货自己送上门。</div>
+            </div>
+        </div>
+
+        <div class="chapter" onclick="this.classList.toggle('open')">
+            <div class="chapter-header">
+                <div class="chapter-title">
+                    <span class="chapter-num">14</span>
+                    <span>认识预测的局限性</span>
+                </div>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="chapter-content">
+                <div class="fable">
+                    <div class="fable-title">🔮 寓言：算命先生和天气预报员</div>
+                    <p>算命先生什么都知道，但多半是错的——只是你忘了去对账。<br>天气预报员说得保守，但多半是对的。</p>
+                </div>
+                <div class="core-point" style="margin-top:12px;">未来不可预测，尤其是最需要预测的关键时刻。</div>
+                <blockquote style="margin-top:10px; padding:10px; background:#1e1e30; border-radius:8px; font-style:italic;">
+                    "人类不是被一无所知的事所累，而是被深信不疑的事所累。" —— 马克·吐温
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="chapter" onclick="this.classList.toggle('open')">
+            <div class="chapter-header">
+                <div class="chapter-title">
+                    <span class="chapter-num">15</span>
+                    <span>正确认识自身</span>
+                </div>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="chapter-content">
+                <div class="fable">
+                    <div class="fable-title">🌤️ 寓言：老渔夫与天气预报员</div>
+                    <p>老渔夫看燕子低飞、蚂蚁搬家，就带蓑衣出海。他不知道明天会下雨，但知道今天气象条件已经具备了。</p>
+                </div>
+                <div class="core-point" style="margin-top:12px;">不预测未来，而是观察现状、测量市场温度。</div>
+                <div class="table-wrap" style="margin-top:15px;">
+                    <table>
+                        <tr><th>🔥 过热信号（危险）</th><th>❄️ 过冷信号（机会）</th></tr>
+                        <tr><td>媒体鼓吹"这次不一样"</td><td>媒体说"股市已死"</td></tr>
+                        <tr><td>人人觉得投资简单</td><td>人人觉得投资太难</td></tr>
+                        <tr><td>新基金被抢购</td><td>新基金发行失败</td></tr>
+                        <tr><td>高市盈率</td><td>低市盈率</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter" onclick="this.classList.toggle('open')">
+            <div class="chapter-header">
+                <div class="chapter-title">
+                    <span class="chapter-num">16</span>
+                    <span>重视运气</span>
+                </div>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="chapter-content">
+                <div class="fable">
+                    <div class="fable-title">🏹 寓言：两个弓箭手</div>
+                    <p>醉汉闭眼胡乱射一箭，正中靶心，被当成神射手。第二年再射，扎中观众帽子。</p>
+                </div>
+                <div class="core-point" style="margin-top:12px;">短期运气和技能看起来一模一样，只有长期才能分开。</div>
+                <blockquote style="margin-top:10px; padding:10px; background:#1e1e30; border-radius:8px;">
+                    <strong>塔勒布的"未然历史"：</strong><br>
+                    已发生的事只是可能发生的事中的一小部分。俄罗斯转盘赢了1000万，和牙医靠技术赚1000万——账面一样，本质天差地别。
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="chapter" onclick="this.classList.toggle('open')">
+            <div class="chapter-header">
+                <div class="chapter-title">
+                    <span class="chapter-num">17</span>
+                    <span>多元化投资</span>
+                </div>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="chapter-content">
+                <div class="fable">
+                    <div class="fable-title">⚽ 寓言：足球比赛</div>
+                    <p>足球比赛中，同一11人既要进攻也要防守。投资也是如此。</p>
+                </div>
+                <div class="core-point" style="margin-top:12px;">进攻与防守要平衡。</div>
+                <ul class="checklist">
+                    <li>⚔️ 进攻：追求高额收益，承担高风险</li>
+                    <li>🛡️ 防守：避免损失，分散风险</li>
+                </ul>
+                <blockquote style="margin-top:10px; padding:10px; background:#1e1e30; border-radius:8px; font-style:italic;">
+                    "有老投资者，有大胆的投资者，但没有大胆的老投资者。"
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="chapter" onclick="this.classList.toggle('open')">
+            <div class="chapter-header">
+                <div class="chapter-title">
+                    <span class="chapter-num">18</span>
+                    <span>避免错误</span>
+                </div>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="chapter-content">
+                <div class="fable">
+                    <div class="fable-title">🌙 寓言：走夜路的老人</div>
+                    <p>老人不看远处，只看脚下三步。远处看不清，但脚下能看清，一步一步总能到家。</p>
+                </div>
+                <div class="core-point" style="margin-top:12px;">投资者不需要做对什么，只需避免重大错误。</div>
+                <div class="table-wrap" style="margin-top:15px;">
+                    <table>
+                        <tr><th>层次</th><th>内容</th></tr>
+                        <tr><td>屈从错误</td><td>被贪婪/恐惧驱动，追涨杀跌</td></tr>
+                        <tr><td>失察错误</td><td>被卷进去，买在泡沫顶部</td></tr>
+                        <tr><td>不作为错误</td><td>知道问题但没利用</td></tr>
+                    </table>
+                </div>
+                <p style="margin-top:15px; color:#f0c040; font-weight:500;">⚠️ 最大的错误：在底部恐慌抛售，将浮亏变成永久损失。</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>📚 第1-18章已完成 | 第19-20章待完成</p>
+            <p style="margin-top:5px;">蕾姆整理 · 基于与主人的读书讨论</p>
+        </div>
+    </div>
+<!-- hexo injector body_end start --><script data-pjax src="https://registry.npmmirror.com/oh-my-live2d/latest/files"></script><script>const oml2d = OML2D.loadOml2d({importType:"cubism2",dockedPosition:"right",menus:{items:[]},mobileDisplay:true,showHitAreaFrames:true,models:[{"path":"/live2d/model/rem/rem.json","scale":0.12,"position":[0,60],"stageStyle":{"width":340,"height":380,"margin-right":"50px"},"mobileScale":0.1,"mobilePosition":[-10,23],"mobileStageStyle":{"width":280,"height":280}}],primaryColor:"var(--btn-bg)",sayHello:true,tips:{style: {"width":230,"height":120,"left":"calc(50% - 20px)"}}});</script><!-- hexo injector body_end end --></body>
+</html></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">lewis</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/38dcc020/" title="《投资最重要的事》读书笔记">《投资最重要的事》读书笔记</a><time datetime="2026-06-25T17:10:00.000Z" title="发表于 2026-06-26 01:10:00">2026-06-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/github-acceleration-guide/" title="GitHub下载加速指南">GitHub下载加速指南</a><time datetime="2026-06-16T02:54:00.000Z" title="发表于 2026-06-16 10:54:00">2026-06-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/1b2ab5c/" title="Marvis（马维斯）洞察报告">Marvis（马维斯）洞察报告</a><time datetime="2026-05-28T07:00:00.000Z" title="发表于 2026-05-28 15:00:00">2026-05-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/live2d-tutorial/" title="Live2D Cubism 教程笔记">Live2D Cubism 教程笔记</a><time datetime="2026-05-26T11:42:00.000Z" title="发表于 2026-05-26 19:42:00">2026-05-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/b40747a7/" title="RTX 50系显卡品牌选购指南">RTX 50系显卡品牌选购指南</a><time datetime="2026-05-20T01:57:00.000Z" title="发表于 2026-05-20 09:57:00">2026-05-20</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/AI%E5%B7%A5%E5%85%B7/"><span class="card-category-list-name">AI工具</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/"><span class="card-category-list-name">工具</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/"><span class="card-category-list-name">教程</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A1%AC%E4%BB%B6%E8%AF%84%E6%B5%8B/"><span class="card-category-list-name">硬件评测</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/"><span class="card-category-list-name">读书</span><span class="card-category-list-count">1</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E9%9C%8D%E5%8D%8E%E5%BE%B7%C2%B7%E9%A9%AC%E5%85%8B%E6%96%AF/" style="font-size: 1.1em; color: #999">霍华德·马克斯</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/" style="font-size: 1.1em; color: #999">编程工具</a> <a href="/tags/%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87/" style="font-size: 1.1em; color: #999">开发效率</a> <a href="/tags/%E5%8A%A8%E7%94%BB/" style="font-size: 1.1em; color: #999">动画</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 1.5em; color: #99a9bf">工具</a> <a href="/tags/%E6%98%BE%E5%8D%A1/" style="font-size: 1.1em; color: #999">显卡</a> <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" style="font-size: 1.1em; color: #999">读书笔记</a> <a href="/tags/GitHub/" style="font-size: 1.1em; color: #999">GitHub</a> <a href="/tags/%E5%BF%AB%E6%8D%B7%E5%91%BD%E4%BB%A4/" style="font-size: 1.1em; color: #999">快捷命令</a> <a href="/tags/AI%E5%8A%A9%E6%89%8B/" style="font-size: 1.1em; color: #999">AI助手</a> <a href="/tags/%E6%8A%95%E8%B5%84/" style="font-size: 1.1em; color: #999">投资</a> <a href="/tags/%E5%A4%9AAgent/" style="font-size: 1.1em; color: #999">多Agent</a> <a href="/tags/Marvis/" style="font-size: 1.1em; color: #999">Marvis</a> <a href="/tags/%E7%A1%AC%E4%BB%B6/" style="font-size: 1.3em; color: #99a1ac">硬件</a> <a href="/tags/Vim/" style="font-size: 1.1em; color: #999">Vim</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.1em; color: #999">技术</a> <a href="/tags/AI/" style="font-size: 1.1em; color: #999">AI</a> <a href="/tags/%E8%85%BE%E8%AE%AF/" style="font-size: 1.1em; color: #999">腾讯</a> <a href="/tags/terminal/" style="font-size: 1.1em; color: #999">terminal</a> <a href="/tags/%E8%A3%85%E6%9C%BA/" style="font-size: 1.3em; color: #99a1ac">装机</a> <a href="/tags/Live2D/" style="font-size: 1.1em; color: #999">Live2D</a> <a href="/tags/RTX50/" style="font-size: 1.1em; color: #999">RTX50</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/06/">
+            <span class="card-archive-list-date">
+              六月 2026
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/05/">
+            <span class="card-archive-list-date">
+              五月 2026
+            </span>
+            <span class="card-archive-list-count">8</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">10</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-06-25T17:05:11.096Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By lewis</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script id="canvas_nest" defer="defer" color="100,149,237" opacity="0.7" zIndex="-1" count="150" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      false
+        ? pjax.loadUrl('/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
