@@ -1,0 +1,4 @@
+/* 隐藏整个footer区域 */
+#footer {
+  display: none !important;
+}
